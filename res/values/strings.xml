@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tip Calculator</string>
+    <string name="meal_Amt">Enter Meal Amount</string>
+    <string name="ten_percent">10%</string>
+    <string name="fifteen_percent">15%</string>
+    <string name="twenty_percent">20%</string>
+    <string name="custom_Label">Or Enter Custom Tip Amt:</string>
+    <string name="percent_Amt">0%</string>
+    <string name="tip_Label">Tip is:</string>
+    <string name="dollar_Amt">$0.00</string>
+    <string name="total_Label">Total is:</string>
+    <string name="meal_Label">Enter total meal amount:</string>
+
+
+</resources>

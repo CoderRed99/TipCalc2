@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <Button
+        android:id="@+id/btnFifteenPercent"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="onDetermineTip"
+        android:tag="15"
+        android:text="@string/fifteen_percent" />
+
+    <Button
+        android:id="@+id/btnTenPercent"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnFifteenPercent"
+        android:layout_toLeftOf="@+id/btnFifteenPercent"
+        android:onClick="onDetermineTip"
+        android:tag="10"
+        android:text="@string/ten_percent" />
+
+    <Button
+        android:id="@+id/btnTwentyPercent"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnFifteenPercent"
+        android:layout_alignBottom="@+id/btnFifteenPercent"
+        android:layout_toRightOf="@+id/btnFifteenPercent"
+        android:onClick="onDetermineTip"
+        android:tag="20"
+        android:text="@string/twenty_percent" />
+
+    <!-- EditText to get the Meal Amount -->
+    <EditText
+        android:id="@+id/etMealAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:hint="@string/dollar_Amt"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:digits="1234567890.$"
+        android:gravity="right"/>
+    
+    	<requestFocus />
+
+    <EditText
+        android:id="@+id/etCustomTipAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnFifteenPercent"
+        android:layout_below="@+id/tvCustomTipLabel"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/btnTwentyPercent"
+        android:gravity="right"
+        android:ems="10"
+        android:hint="@string/percent_Amt"
+        android:inputType="numberDecimal"
+        android:digits="1234567890%" />
+
+    <TextView
+        android:id="@+id/tvCustomTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnFifteenPercent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/custom_Label"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCustomTipAmt"
+        android:layout_marginTop="28dp"
+        android:layout_toLeftOf="@+id/etCustomTipAmt"
+        android:text="@string/tip_Label"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView
+        android:id="@+id/tvTipAmtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTipLabel"
+        android:layout_alignBottom="@+id/tvTipLabel"
+        android:layout_alignRight="@+id/etMealAmt"
+        android:layout_toRightOf="@+id/etCustomTipAmt"
+        android:gravity="right"
+        android:text="@string/dollar_Amt"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView
+        android:id="@+id/tvTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTipAmtLabel"
+        android:layout_toLeftOf="@+id/etCustomTipAmt"
+        android:text="@string/total_Label"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvTotalAmtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTotalLabel"
+        android:layout_alignBottom="@+id/tvTotalLabel"
+        android:layout_alignRight="@+id/tvTipAmtLabel"
+        android:layout_toRightOf="@+id/etCustomTipAmt"
+        android:gravity="right"
+        android:text="@string/dollar_Amt"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvMealLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etMealAmt"
+        android:layout_alignRight="@+id/tvCustomTipLabel"
+        android:layout_marginBottom="37dp"
+        android:text="@string/meal_Label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+</RelativeLayout>
